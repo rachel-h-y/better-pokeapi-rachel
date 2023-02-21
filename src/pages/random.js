@@ -8,7 +8,7 @@ const fetcher = async (url) => {
 }
 
 export default function Random() {
-    const { data, error, isLoading, isValidating } = useSWR("/api/", fetcher)
+    const { data, error, isLoading, isValidating } = useSWR("/api/pokemon", fetcher)
     if (isLoading) return <div>Loading</div>
     if (!data) return (
         <>
@@ -21,7 +21,7 @@ export default function Random() {
 
     return (
         <>
-            <Link href="/"><h1>Better PokeAPI</h1></Link>
+            
             {isValidating ? (
                 <h2>Validating</h2>
             ) : (
