@@ -1,5 +1,7 @@
 # Project 1 - The Better PokeAPI™️
 
+Project Link: https://youtu.be/mQViK__f2Fo
+
 ## Description
 
 Create a backend that abstracts some aspects and combines features of the PokeAPI. For instance, an endpoint that just gets the name, image, and type of a specific Pokemon.
