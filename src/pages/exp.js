@@ -1,6 +1,7 @@
 import axios from 'axios'
 import useSWR from 'swr'
 import Link from 'next/link'
+import { Button, Box } from '@mui/material';
 
 const fetcher = async (url) => {
     const res = await axios.get(url)
@@ -22,6 +23,13 @@ export default function Exp() {
 
     return (
         <>
+        <Box
+            sx={{
+            my: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            }}>
             <Link href="/"><h1>Better PokeAPI</h1></Link>
             <h2>Name: {name}</h2>
             <h2>Level: {level}</h2>
@@ -32,6 +40,7 @@ export default function Exp() {
                     <h2>Experience: {experience}</h2>
                 </>
             )}
+            </Box>
         </>
     )
 }

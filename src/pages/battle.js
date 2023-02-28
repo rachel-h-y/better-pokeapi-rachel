@@ -1,6 +1,7 @@
 import axios from 'axios'
 import useSWR from 'swr'
 import Link from 'next/link'
+import { Button, Box } from '@mui/material';
 
 const fetcher = async (url) => {
     const res = await axios.post(url, {
@@ -24,7 +25,14 @@ export default function Battle() {
     let { winner } = data
 
     return (
-        <>
+        <div>
+        <Box
+        sx={{
+        my: 8,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        }}>
             <Link href="/"><h1>Better PokeAPI</h1></Link>
             <h2>Battle: Pikachu vs. Lucario</h2>
 
@@ -35,6 +43,7 @@ export default function Battle() {
                     <h2>Winner: {winner}</h2>
                 </>
             )}
-        </>
+            </Box>
+        </div>
     )
 }

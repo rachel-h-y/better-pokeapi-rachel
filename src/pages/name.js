@@ -1,6 +1,8 @@
 import axios from 'axios'
 import useSWR from 'swr'
 import Link from 'next/link'
+import { Button, Box } from '@mui/material';
+
 
 const fetcher = async (url) => {
     const res = await axios.get(url)
@@ -24,7 +26,16 @@ export default function Name() {
 
     return (
         <>
-            <h1><Link href="/">Better PokeAPI</Link></h1>
+        <Box
+            sx={{
+            my: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            }}>
+            <Link href="/"><h1>Better PokeAPI</h1></Link>
+            
+
             {isValidating ? (
                 <h2>Validating</h2>
             ) : (
@@ -34,6 +45,7 @@ export default function Name() {
                     <h2>Types: {types.map(type => <span>{type} </span>)}</h2>
                 </>
             )}
+            </Box>
         </>
     )
 }

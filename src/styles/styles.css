@@ -1,6 +1,7 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 a {
     display: block;
     padding: 10px 10px 20px;
@@ -8,5 +9,25 @@ a {
     max-width: 500px;
     border-radius: 5px;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
+
+h1 {
+    color: #d73131;
+    font-family: arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+    
+
+
+

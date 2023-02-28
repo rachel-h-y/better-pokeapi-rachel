@@ -1,10 +1,12 @@
 import axios from 'axios'
 import useSWR from 'swr'
 import Link from 'next/link'
+import { Button, Box } from '@mui/material';
 
 const fetcher = async (url) => {
     const res = await axios.post(url, {
-        pokemon: "pikachu"
+        pokemon: "pikachu",
+        pokeball: "pokeball"
     })
     return res.data
 }
@@ -23,6 +25,13 @@ export default function Battle() {
 
     return (
         <>
+        <Box
+            sx={{
+            my: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            }}>
             <Link href="/"><h1>Better PokeAPI</h1></Link>
             <h2>Catching: {name}</h2>
 
@@ -37,6 +46,7 @@ export default function Battle() {
                     )}
                 </>
             )}
+        </Box>
         </>
     )
 }
